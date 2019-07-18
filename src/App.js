@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+  
+  // standart method
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     displayBio: false
+  //   }
+  //   console.log('component', this)
+  //   this.toggleDisplayBio =  this.toggleDisplayBio.bind(this);
+  // }
+  // toggleDisplayBio() {
+  //   this.setState({ displayBio: !this.state.displayBio });
+  // }
+  // modern method
+  state = { displayBio: false }
+
+  toggleDisplayBio = () => {
+      this.setState({ displayBio: !this.state.displayBio });
+  }
+
+  render () {
+
+    return (
+        <div className="wrapper">
+          <h1>Hello everyone!</h1>
+          <p>My name is Artyom and I'm a .. who knows who I'm</p>
+          <p>I'm studing React and it's my new project.</p>
+          {  this.state.displayBio ? (
+                <div>
+                  <p>I live in Belgorod, Russia.</p>
+                  <p>I'm  coding everyday and I want to find a good job. I know javascript and other stuffs.</p>
+                  <p>Also I like bicycles and history.</p>
+                  <button onClick={this.toggleDisplayBio}>Show less</button>
+                </div>
+            ) : (
+              <div>
+                <button onClick={this.toggleDisplayBio}>Read More</button>
+              </div>
+            )
+          }
+        </div>
+        
+    
+    )
+  }
 }
-
 export default App;
