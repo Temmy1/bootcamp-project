@@ -7,7 +7,7 @@ class Project extends Component {
     const { title, image, description, link } = this.props.project;
 
     return (
-      <div style={{ display: 'inline-block', margin: 20, width: 300 }}>
+      <div style={{ margin: 20, flex: '0 1 20%' }}>
         <h3>{title}</h3>
         <img src={image} alt='profile' style={{ width: 200, height: 120 }}/>
         <p>{description}</p>
@@ -22,7 +22,7 @@ class Projects extends Component {
     return (
       <div>
         <h2>Highlited projects</h2>
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
           {
             PROJECTS.map(PROJECT => {
               return (
