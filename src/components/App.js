@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
 import Title from './Title';
-import profile from './assets/me.jpg'
+import profile from '../assets/me.jpg'
 
 
 class App extends Component {
-  
   // standart method
   // constructor(props) {
   //   super(props);
@@ -56,4 +55,6 @@ class App extends Component {
     )
   }
 }
+
+
 export default App;

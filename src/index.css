@@ -24,3 +24,30 @@ h1, h2, h3, h4, h5 {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.title-fade-out {
+  opacity: 0;
+  animation: fade-out 2s;
+  -webkit-animation: fade-out 2s;
+}
+.title-fade-in {
+  opacity: 1;
+  animation: fade-in 2s;
+  -webkit-animation: fade-in 2s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
