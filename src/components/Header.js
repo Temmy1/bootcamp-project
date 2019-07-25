@@ -13,6 +13,7 @@ const Header = ({ children }) => {
       <header style={{margin: 50}}>
         <h3 style={style}><Link to="/">Main</Link></h3>
         <h3 style={style}><Link to="/jokes">Jokes</Link></h3>
+        <h3 style={style}><Link to="/music-master">MusicMaster</Link></h3>
       </header>
       {children}
     </>
