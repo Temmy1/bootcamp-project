@@ -28,7 +28,7 @@ const MessageBoard = ({ messages, reactions }) => {
           const { user, text, timestamp, id} = message;
 
           return (
-            <div style={{ border: '1px solid', margin: 10}} key={id}>
+            <div style={{ margin: 10}} key={id}>
               <p><small>{new Date(timestamp).toLocaleString()}</small></p>
               <h4>{user}</h4>
               <p>{text}</p>
