@@ -1,5 +1,5 @@
 const express = require('express');
-const pass = require('path');
+const path = require('path');
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'dist')));
